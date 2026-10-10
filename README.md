@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Portfolio
 
-## Getting Started
+A modern developer portfolio built to win clients: it shows your projects, syncs your public GitHub repos automatically, and includes an AI assistant that answers visitors' questions about your work.
 
-First, run the development server:
+**Stack:** Next.js 16 · TypeScript · Tailwind CSS 4 · Vercel AI SDK · Vercel
+
+## Make it yours
+
+Edit **`src/data/profile.ts`**: name, role, bio, email, socials, services, skills, featured projects, and `githubUsername`. Everything on the site, and everything the AI assistant knows, comes from this file and your public GitHub repos.
+
+For each featured project, set `liveUrl` (your Vercel deployment) and `repo` (`owner/repo`).
+
+## Languages
+
+The site is available in English, German, French, Spanish, Italian, Dutch and Arabic (`/`, `/de`, `/fr`, …).
+
+- Buttons and headings: `src/i18n/ui.ts`
+- Your own content (bio, services, projects, pricing): translated by AI into `src/i18n/translations.json`
+
+After editing `src/data/profile.ts`, run `npm run translate`. It runs automatically before every build too. Sentences that haven't been translated yet show in English.
+
+## Run locally
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in the values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable             | Required          | Purpose                                                          |
+| -------------------- | ----------------- | ---------------------------------------------------------------- |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | One AI key | Free Gemini key from https://aistudio.google.com/apikey (no card). Used first when set. Add it on Vercel too. |
+| `AI_GATEWAY_API_KEY` | One AI key        | Vercel AI Gateway (needs a card on the Vercel account). Not needed on Vercel deployments. |
+| `AI_MODEL`           | No                | Any AI Gateway model id. Default: `anthropic/claude-sonnet-5.5`. |
+| `GITHUB_USERNAME`    | No                | Overrides `githubUsername` in the profile file.                  |
+| `GITHUB_TOKEN`       | No                | Raises GitHub API rate limits.                                   |
 
-## Learn More
+Without an AI key, the site still works and the chat shows a "contact me directly" message.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push this repo to GitHub.
+2. Import it at https://vercel.com/new.
+3. Enable AI Gateway for the project in the Vercel dashboard (AI tab).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every push to `main` then deploys automatically.
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    page.tsx            Home page (sections + chat widget)
+    api/chat/route.ts   AI assistant endpoint (streaming)
+  components/           UI sections and the chat widget
+  data/profile.ts       ← your content
+  lib/github.ts         Cached GitHub repo fetching
+  lib/assistant.ts      AI system prompt built from your profile + repos
+```

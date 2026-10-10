@@ -6,12 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "translate": "node --env-file-if-exists=.env.local scripts/translate.mts",
+    "prebuild": "npm run translate"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.93",
+    "@ai-sdk/react": "^4.0.140",
+    "@vercel/analytics": "^2.0.1",
+    "ai": "^7.0.137",
+    "lucide-react": "^1.54.0",
     "next": "16.4.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
