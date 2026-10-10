@@ -9,7 +9,6 @@ export function Navbar({ t, locale }: { t: Dictionary; locale: Locale }) {
     { href: "#services", label: t.nav.services },
     { href: "#projects", label: t.nav.projects },
     { href: "#process", label: t.nav.process },
-    { href: "#pricing", label: t.nav.pricing },
     { href: "#contact", label: t.nav.contact },
   ];
 

@@ -36,7 +36,6 @@ function sourceStrings(): string[] {
     ...profile.services.flatMap((s) => [s.title, s.description]),
     ...profile.featured.flatMap((p) => [p.description, ...(p.highlights ?? [])]),
     ...profile.process.flatMap((s) => [s.title, s.description]),
-    ...profile.pricing.flatMap((p) => [p.name, p.description, ...p.features]),
   ];
   return [...new Set(strings.filter((s) => s.trim()))];
 }

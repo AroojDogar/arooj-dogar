@@ -15,7 +15,7 @@ For each featured project, set `liveUrl` (your Vercel deployment) and `repo` (`o
 The site is available in English, German, French, Spanish, Italian, Dutch and Arabic (`/`, `/de`, `/fr`, …).
 
 - Buttons and headings: `src/i18n/ui.ts`
-- Your own content (bio, services, projects, pricing): translated by AI into `src/i18n/translations.json`
+- Your own content (bio, services, projects): translated by AI into `src/i18n/translations.json`
 
 After editing `src/data/profile.ts`, run `npm run translate`. It runs automatically before every build too. Sentences that haven't been translated yet show in English.
 

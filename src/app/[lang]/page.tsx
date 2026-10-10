@@ -7,7 +7,6 @@ import { ChatWidget } from "@/components/chat-widget";
 import { Contact, Footer } from "@/components/contact";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
-import { Pricing } from "@/components/pricing";
 import { Process } from "@/components/process";
 import { Projects } from "@/components/projects";
 import { Services } from "@/components/services";
@@ -28,7 +27,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Services t={t} c={c} />
         <Projects t={t} c={c} />
         <Process t={t} c={c} />
-        <Pricing t={t} c={c} />
         <Skills t={t} />
         <Contact t={t} c={c} locale={lang} />
       </main>

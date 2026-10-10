@@ -13,7 +13,6 @@ export type Content = {
   services: { title: string; description: string }[];
   featured: { description: string; highlights: string[] }[];
   process: { title: string; description: string }[];
-  pricing: { name: string; description: string; features: string[] }[];
 };
 
 /** Keep in sync with sourceStrings() in scripts/translate.mts */
@@ -31,11 +30,6 @@ function englishContent(): Content {
       highlights: p.highlights ?? [],
     })),
     process: profile.process.map(({ title, description }) => ({ title, description })),
-    pricing: profile.pricing.map(({ name, description, features }) => ({
-      name,
-      description,
-      features,
-    })),
   };
 }
 

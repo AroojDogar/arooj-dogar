@@ -15,16 +15,6 @@ export type FeaturedProject = {
   image?: string;
 };
 
-export type PricingPlan = {
-  name: string;
-  /** Starting price shown on the card, e.g. "$300" */
-  price: string;
-  description: string;
-  features: string[];
-  /** Highlights the card as "Most popular" */
-  featured?: boolean;
-};
-
 export const profile = {
   name: "Arooj Dogar",
   role: "Full-Stack & AI Developer",
@@ -166,48 +156,6 @@ export const profile = {
         "Your site goes live on your domain, fast and SEO-ready, with support after launch.",
     },
   ],
-
-  /** Packages in the Pricing section — set your own prices here */
-  pricing: [
-    {
-      name: "Starter",
-      price: "$300",
-      description: "A fast, beautiful landing page or small business website.",
-      features: [
-        "Up to 5 pages",
-        "Mobile-friendly, modern design",
-        "Contact form & WhatsApp button",
-        "Basic SEO setup",
-        "Deployed on Vercel",
-      ],
-    },
-    {
-      name: "Business",
-      price: "$900",
-      description: "A complete website or web app for a growing business.",
-      features: [
-        "Up to 12 pages or core app features",
-        "Admin dashboard or content editing",
-        "Online booking, ordering or payments",
-        "Multi-language support",
-        "SEO & performance optimization",
-        "30 days of support",
-      ],
-      featured: true,
-    },
-    {
-      name: "AI Pro",
-      price: "$1,500",
-      description: "A custom web app with AI features built in.",
-      features: [
-        "Everything in Business",
-        "AI chatbot trained on your business",
-        "AI content or document tools",
-        "Automations & integrations",
-        "60 days of support",
-      ],
-    },
-  ] satisfies PricingPlan[],
 };
 
 export type Profile = typeof profile;

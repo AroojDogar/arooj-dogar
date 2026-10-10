@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 
-// Fixed interface text. Your own content (bio, services, projects, pricing…)
+// Fixed interface text. Your own content (bio, services, projects…)
 // comes from src/data/profile.ts and is translated automatically by AI.
 // Placeholders like {name} are filled in with fmt().
 
@@ -9,7 +9,6 @@ const en = {
     services: "Services",
     projects: "Projects",
     process: "Process",
-    pricing: "Pricing",
     skills: "Skills",
     contact: "Contact",
     hireMe: "Hire me",
@@ -46,16 +45,6 @@ const en = {
     title: "How we'll work together",
     description:
       "A simple, transparent process, so you always know what's happening and what comes next.",
-  },
-  pricing: {
-    eyebrow: "Pricing",
-    title: "Simple packages, clear prices",
-    description:
-      "Pick a starting point. Every project gets a fixed quote after a free discovery call.",
-    startingAt: "Starting at",
-    mostPopular: "Most popular",
-    getStarted: "Get started",
-    note: "Need something different? Let's talk — I'll put together a custom quote.",
   },
   skills: {
     eyebrow: "Skills",
@@ -142,7 +131,6 @@ const de: Dictionary = {
     services: "Leistungen",
     projects: "Projekte",
     process: "Ablauf",
-    pricing: "Preise",
     skills: "Skills",
     contact: "Kontakt",
     hireMe: "Anfragen",
@@ -179,16 +167,6 @@ const de: Dictionary = {
     title: "So arbeiten wir zusammen",
     description:
       "Ein einfacher, transparenter Ablauf – Sie wissen immer, was gerade passiert und was als Nächstes kommt.",
-  },
-  pricing: {
-    eyebrow: "Preise",
-    title: "Einfache Pakete, klare Preise",
-    description:
-      "Wählen Sie einen Ausgangspunkt. Jedes Projekt erhält nach einem kostenlosen Erstgespräch ein Festpreisangebot.",
-    startingAt: "Ab",
-    mostPopular: "Am beliebtesten",
-    getStarted: "Jetzt starten",
-    note: "Sie brauchen etwas anderes? Sprechen wir darüber – ich erstelle Ihnen ein individuelles Angebot.",
   },
   skills: {
     eyebrow: "Skills",
@@ -274,7 +252,6 @@ const fr: Dictionary = {
     services: "Services",
     projects: "Projets",
     process: "Méthode",
-    pricing: "Tarifs",
     skills: "Compétences",
     contact: "Contact",
     hireMe: "Me contacter",
@@ -311,16 +288,6 @@ const fr: Dictionary = {
     title: "Comment nous allons travailler ensemble",
     description:
       "Une méthode simple et transparente : vous savez toujours où en est le projet et quelle est la prochaine étape.",
-  },
-  pricing: {
-    eyebrow: "Tarifs",
-    title: "Des offres simples, des prix clairs",
-    description:
-      "Choisissez un point de départ. Chaque projet reçoit un devis fixe après un premier échange gratuit.",
-    startingAt: "À partir de",
-    mostPopular: "Le plus choisi",
-    getStarted: "Commencer",
-    note: "Besoin d'autre chose ? Parlons-en — je vous prépare un devis sur mesure.",
   },
   skills: {
     eyebrow: "Compétences",
@@ -406,7 +373,6 @@ const es: Dictionary = {
     services: "Servicios",
     projects: "Proyectos",
     process: "Proceso",
-    pricing: "Precios",
     skills: "Habilidades",
     contact: "Contacto",
     hireMe: "Contrátame",
@@ -443,16 +409,6 @@ const es: Dictionary = {
     title: "Cómo trabajaremos juntos",
     description:
       "Un proceso sencillo y transparente: siempre sabrás qué está pasando y cuál es el siguiente paso.",
-  },
-  pricing: {
-    eyebrow: "Precios",
-    title: "Paquetes sencillos, precios claros",
-    description:
-      "Elige un punto de partida. Cada proyecto recibe un presupuesto cerrado tras una llamada inicial gratuita.",
-    startingAt: "Desde",
-    mostPopular: "El más popular",
-    getStarted: "Empezar",
-    note: "¿Necesitas algo distinto? Hablemos y te preparo un presupuesto a medida.",
   },
   skills: {
     eyebrow: "Habilidades",
@@ -537,7 +493,6 @@ const it: Dictionary = {
     services: "Servizi",
     projects: "Progetti",
     process: "Metodo",
-    pricing: "Prezzi",
     skills: "Competenze",
     contact: "Contatti",
     hireMe: "Contattami",
@@ -574,16 +529,6 @@ const it: Dictionary = {
     title: "Come lavoreremo insieme",
     description:
       "Un processo semplice e trasparente: saprai sempre cosa sta succedendo e qual è il prossimo passo.",
-  },
-  pricing: {
-    eyebrow: "Prezzi",
-    title: "Pacchetti semplici, prezzi chiari",
-    description:
-      "Scegli un punto di partenza. Ogni progetto riceve un preventivo fisso dopo una prima call gratuita.",
-    startingAt: "A partire da",
-    mostPopular: "Il più scelto",
-    getStarted: "Inizia ora",
-    note: "Ti serve qualcosa di diverso? Parliamone: preparo un preventivo su misura.",
   },
   skills: {
     eyebrow: "Competenze",
@@ -668,7 +613,6 @@ const nl: Dictionary = {
     services: "Diensten",
     projects: "Projecten",
     process: "Werkwijze",
-    pricing: "Prijzen",
     skills: "Skills",
     contact: "Contact",
     hireMe: "Neem contact op",
@@ -705,16 +649,6 @@ const nl: Dictionary = {
     title: "Zo werken we samen",
     description:
       "Een eenvoudige, transparante werkwijze, zodat je altijd weet wat er gebeurt en wat de volgende stap is.",
-  },
-  pricing: {
-    eyebrow: "Prijzen",
-    title: "Eenvoudige pakketten, duidelijke prijzen",
-    description:
-      "Kies een startpunt. Elk project krijgt een vaste prijs na een gratis kennismakingsgesprek.",
-    startingAt: "Vanaf",
-    mostPopular: "Meest gekozen",
-    getStarted: "Aan de slag",
-    note: "Iets anders nodig? Laten we praten, dan maak ik een offerte op maat.",
   },
   skills: {
     eyebrow: "Skills",
@@ -799,7 +733,6 @@ const ar: Dictionary = {
     services: "الخدمات",
     projects: "المشاريع",
     process: "طريقة العمل",
-    pricing: "الأسعار",
     skills: "المهارات",
     contact: "تواصل",
     hireMe: "تواصل معي",
@@ -835,15 +768,6 @@ const ar: Dictionary = {
     eyebrow: "طريقة العمل",
     title: "كيف سنعمل معًا",
     description: "طريقة عمل بسيطة وواضحة، لتعرف دائمًا ما يحدث وما هي الخطوة التالية.",
-  },
-  pricing: {
-    eyebrow: "الأسعار",
-    title: "باقات بسيطة وأسعار واضحة",
-    description: "اختر نقطة البداية. يحصل كل مشروع على عرض سعر ثابت بعد مكالمة تعارف مجانية.",
-    startingAt: "يبدأ من",
-    mostPopular: "الأكثر طلبًا",
-    getStarted: "ابدأ الآن",
-    note: "تحتاج شيئًا مختلفًا؟ لنتحدث وسأعدّ لك عرض سعر مخصصًا.",
   },
   skills: {
     eyebrow: "المهارات",
